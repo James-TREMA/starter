@@ -1,9 +1,13 @@
-<nav>
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}">Home</a>
-    <a routerLink="/intro" routerLinkActive="active">Intro</a>
-    <a routerLink="/about" routerLinkActive="active">About</a>
-  </nav>
-  
-  <!-- Le contenu des composants -->
-  <!-- sera injecté ici selon la route -->
-  <router-outlet></router-outlet>
+<nav class="navigation">
+  <a routerLink="/" routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true}">
+    Home
+  </a>
+  <a routerLink="/intro" routerLinkActive="active">Data-Binding</a>
+  <a routerLink="/about/1" routerLinkActive="active">Ngif</a>
+  <a routerLink="/about/2" routerLinkActive="active">Ngfor</a>
+</nav>
+
+<!-- Le contenu des composants -->
+<!-- sera injecté ici selon la route -->
+<router-outlet></router-outlet>
