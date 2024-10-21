@@ -1,1 +1,12 @@
-<p>data-binding works!</p>
+<section>
+    <h2>Data Binding</h2>
+  
+    <p>Interpolation</p>
+    <p>title: {{ title }}</p>
+  
+    <p>Binding unidirectionnel</p>
+    <input [value]="title" />
+  
+    <p>Binding bidirectionnel</p>
+    <input [(ngModel)]="title" />
+</section>

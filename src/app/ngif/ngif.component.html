@@ -1,1 +1,16 @@
 <p>ngif works!</p>
+<section>
+    <h2>Exemple ngIf</h2>
+  
+    <button (click)="visible = !visible">Toggle</button>
+    <ng-template [ngIf]="visible" [ngIfThen]="visibleTemplate" [ngIfElse]="notVisibleTemplate">
+    </ng-template>
+  
+    <ng-template #visibleTemplate>
+      <p>Visible est True</p>
+    </ng-template>
+    <ng-template #notVisibleTemplate>
+      <p>Visible est False</p>
+    </ng-template>
+</section>
+  
