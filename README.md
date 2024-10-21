@@ -1,27 +1,57 @@
-# Starter
+# Starter Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
 
-## Development server
+## Introduction
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Angular est un framework JavaScript open-source utilisé pour développer des applications web. Il utilise TypeScript pour structurer le code et propose des outils puissants pour le développement de composants, la gestion de la navigation et des services.
 
-## Code scaffolding
+### Créer un projet Angular
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Pour créer un nouveau projet Angular, assurez-vous d'avoir installé Angular CLI. Ensuite, utilisez la commande suivante dans votre terminal :
 
-## Build
+```bash
+ng new nom-du-projet
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Cela va créer une structure de base pour votre projet Angular.
 
-## Running unit tests
+### Créer un composant Angular
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Un composant est une partie essentielle d'une application Angular. Pour créer un composant, utilisez la commande suivante :
 
-## Running end-to-end tests
+```bash
+ng g c nom-du-composant
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Par exemple, pour créer un composant appelé `exemple`, utilisez :
 
-## Further help
+```bash
+ng g c exemple
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Cette commande génère plusieurs fichiers : le fichier HTML, CSS, TypeScript, et un fichier de test.
+
+## Serveur de développement
+
+Exécutez `ng serve` pour lancer un serveur de développement. Accédez à `http://localhost:4200/`. L'application se rechargera automatiquement lorsque vous modifiez les fichiers source.
+
+## Génération de composants
+
+Exécutez `ng generate component nom-du-composant` pour générer un nouveau composant. Vous pouvez également utiliser `ng generate directive|pipe|service|class|guard|interface|enum|module` pour créer d'autres entités.
+
+## Compilation du projet
+
+Exécutez `ng build` pour compiler le projet. Les artefacts de compilation seront stockés dans le répertoire `dist/`.
+
+## Tests unitaires
+
+Exécutez `ng test` pour exécuter les tests unitaires via [Karma](https://karma-runner.github.io).
+
+## Tests end-to-end
+
+Exécutez `ng e2e` pour exécuter les tests end-to-end via une plateforme de votre choix. Pour utiliser cette commande, vous devez d'abord ajouter un package qui implémente des capacités de tests end-to-end.
+
+## Aide supplémentaire
+
+Pour plus d'aide sur Angular CLI, exécutez `ng help` ou consultez la page [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli).
