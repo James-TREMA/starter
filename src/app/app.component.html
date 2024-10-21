@@ -1,8 +1,8 @@
 <nav>
-    <a routerLink="/">Home</a>
-    <a routerLink="/intro">Intro</a>
-    <a routerLink="/about">About</a>
-</nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}">Home</a>
+    <a routerLink="/intro" routerLinkActive="active">Intro</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+  </nav>
   
   <!-- Le contenu des composants -->
   <!-- sera injecté ici selon la route -->
