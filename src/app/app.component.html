@@ -1,25 +1,9 @@
-<p>Interpolation</p>
-<h1>{{ title }}</h1>
-
-<p>Binding unidirectionnel</p>
-<input [value]="title" />
-
-<p>Binding bidirectionnel</p>
-<input [(ngModel)]="title" />
-
-<p>Exemple ngIf</p>
-<button (click)="visible = !visible">Toggle</button>
-<ng-template
-[ngIf]="visible"
-[ngIfThen]="visibleTemplate"
-[ngIfElse]="notVisibleTemplate">
-</ng-template>
-
-<ng-template #visibleTemplate>
-  <p>Visible est True</p>
-</ng-template>
-<ng-template #notVisibleTemplate>
-  <p>Visible est False</p>
-</ng-template>
-
-<router-outlet></router-outlet>
+<nav>
+    <a routerLink="/">Home</a>
+    <a routerLink="/intro">Intro</a>
+    <a routerLink="/about">About</a>
+</nav>
+  
+  <!-- Le contenu des composants -->
+  <!-- sera injecté ici selon la route -->
+  <router-outlet></router-outlet>

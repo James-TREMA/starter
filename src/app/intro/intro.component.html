@@ -1,0 +1,25 @@
+<h1>intro works!</h1>
+
+<p>Interpolation</p>
+<p>{{ title }}</p>
+
+<p>Binding unidirectionnel</p>
+<input [value]="title" />
+
+<p>Binding bidirectionnel</p>
+<input [(ngModel)]="title" />
+
+<p>Exemple ngIf</p>
+<button (click)="visible = !visible">Toggle</button>
+<ng-template
+[ngIf]="visible"
+[ngIfThen]="visibleTemplate"
+[ngIfElse]="notVisibleTemplate">
+</ng-template>
+
+<ng-template #visibleTemplate>
+  <p>Visible est True</p>
+</ng-template>
+<ng-template #notVisibleTemplate>
+  <p>Visible est False</p>
+</ng-template>
