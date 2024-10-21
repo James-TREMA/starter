@@ -8,6 +8,18 @@
 <input [(ngModel)]="title" />
 
 <p>Exemple ngIf</p>
-<ng-template ngIf="!visible">
-  <p>Coucou</p>
+<button (click)="visible = !visible">Toggle</button>
+<ng-template
+[ngIf]="visible"
+[ngIfThen]="visibleTemplate"
+[ngIfElse]="notVisibleTemplate">
 </ng-template>
+
+<ng-template #visibleTemplate>
+  <p>Visible est True</p>
+</ng-template>
+<ng-template #notVisibleTemplate>
+  <p>Visible est False</p>
+</ng-template>
+
+<router-outlet></router-outlet>
