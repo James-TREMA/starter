@@ -6,6 +6,7 @@ import { NgifComponent } from './pages/ngif/ngif.component';
 import { NgforComponent } from './pages/ngfor/ngfor.component';
 import { LoginComponent } from './pages/login/login.component';
 import { authenticateGuard } from './authenticate.guard';
+import { LayoutComponent } from './components/layout/layout.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent},
