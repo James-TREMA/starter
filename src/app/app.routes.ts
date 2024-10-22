@@ -5,12 +5,18 @@ import { DataBindingComponent } from './pages/data-binding/data-binding.componen
 import { NgifComponent } from './pages/ngif/ngif.component';
 import { NgforComponent } from './pages/ngfor/ngfor.component';
 import { LoginComponent } from './pages/login/login.component';
+import { authenticateGuard } from './authenticate.guard';
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent},
-    { path: '', component: HomeComponent },
-    { path: 'data-binding', component: DataBindingComponent },
-    { path: 'ngif', component: NgifComponent },
-    { path: 'ngfor', component: NgforComponent },
-    { path: 'about/:id', component: AboutComponent }
+    {
+        path: '', component: LayoutComponent, canActivate: [authenticateGuard],
+        children: [
+            { path: '', component: HomeComponent, canActivate: [authenticateGuard] },
+            { path: 'data-binding', component: DataBindingComponent },
+            { path: 'ngif', component: NgifComponent },
+            { path: 'ngfor', component: NgforComponent },
+            { path: 'about/:id', component: AboutComponent }        
+        ]
+    }
 ];
