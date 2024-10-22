@@ -1,1 +1,30 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="email">Email: </label>
+        <input id="email" formControlName="email" />
+        <ng-template
+            [ngIf]="email?.invalid && (email?.touched || email?.dirty)"
+            [ngIfThen]="invalidEmail"
+        />
+        <ng-template #invalidEmail>
+            <small *ngIf="email?.errors?.['required']">L'email est requis</small>
+            <small *ngIf="email?.errors?.['minlength']">L'email doit faire au minimum 3 caractères</small>
+            <small *ngIf="email?.errors?.['email']">L'email n'est pas valide</small>
+        </ng-template>
+    </div>
+
+    <div>
+        <label for="password">Password: </label>
+        <input id="password" type="password" formControlName="password" />
+        <ng-template
+            [ngIf]="password?.invalid && (password?.touched || password?.dirty)"
+            [ngIfThen]="invalidPassword"
+        />
+        <ng-template #invalidPassword>
+            <small *ngIf="password?.errors?.['required']">Le password est requis</small>
+            <small *ngIf="password?.errors?.['minlength']">Le password doit faire au minimum 6 caractères</small>
+        </ng-template>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">Connexion</button>
+</form>
