@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { DataBindingComponent } from './data-binding/data-binding.component';
-import { NgifComponent } from './ngif/ngif.component';
-import { NgforComponent } from './ngfor/ngfor.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
+import { DataBindingComponent } from './pages/data-binding/data-binding.component';
+import { NgifComponent } from './pages/ngif/ngif.component';
+import { NgforComponent } from './pages/ngfor/ngfor.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },

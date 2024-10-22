@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { MyButtonComponent } from "../my-button/my-button.component";
-import { InfoClimatService, Meteo } from '../services/info-climat.service';
+import { InfoClimatService, Meteo } from '../../services/info-climat.service';
+import { MyButtonComponent } from '../../components/my-button/my-button.component';
 
 @Component({
   selector: 'app-home',
